@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geunhyuk Youk</title>
+  <meta name="description" content="Geunhyuk Youk — Ph.D. student at KAIST working on computer vision, especially image and video restoration (video super-resolution, deblurring, diffusion-based restoration)." />
+  <meta name="author" content="Geunhyuk Youk" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Geunhyuk Youk" />
+  <meta property="og:description" content="Ph.D. student at KAIST · Image &amp; Video Restoration" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://geunhyukyouk.github.io/" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="static/css/style.css" />
+
+  <!-- Apply saved theme before first paint to avoid flashing -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ======================= NAV ======================= -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">GY</span>
+        <span class="brand-name">Geunhyuk&nbsp;Youk</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#news" class="nav-link">News</a>
+        <a href="#publications" class="nav-link">Publications</a>
+        <a href="#service" class="nav-link">Service</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="https://drive.google.com/file/d/19x9OmyGnXnr5irfUciLjUc0U6sDsUvxa/view?usp=drive_link" target="_blank" rel="noopener" class="nav-cv">CV</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="nav-burger" class="nav-burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================= LAYOUT: fixed sidebar + scrolling content ======================= -->
+  <div class="layout container">
+
+    <!-- ---------- Sidebar (sticky) ---------- -->
+    <aside class="sidebar">
+      <div class="photo-frame">
+        <img src="static/images/profile.jpg" alt="Geunhyuk Youk"
+             onerror="this.onerror=null;this.src='static/images/profile-placeholder.svg';" />
+      </div>
+      <h1 class="side-name">Geunhyuk Youk</h1>
+      <p class="side-role">Ph.D. Student</p>
+      <p class="side-affil">
+        <a href="https://www.viclab.kaist.ac.kr/" target="_blank" rel="noopener">VIC Lab</a> · KAIST EE
+      </p>
+      <a class="side-email" href="mailto:rmsgurkjg@kaist.ac.kr">rmsgurkjg@kaist.ac.kr</a>
+      <div class="side-icons">
+        <a href="https://scholar.google.com/citations?user=NDw33scAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+        </a>
+        <a href="https://github.com/GeunhyukYouk" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.87.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.7.8.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/geunhyuk-youk-05ba96224/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg>
+        </a>
+        <a href="https://drive.google.com/file/d/19x9OmyGnXnr5irfUciLjUc0U6sDsUvxa/view?usp=drive_link" target="_blank" rel="noopener" aria-label="Curriculum Vitae" title="Curriculum Vitae">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ---------- Main content ---------- -->
+    <main class="content">
+
+      <!-- About -->
+      <section class="section" id="about">
+        <h2 class="section-title"><span class="section-bar"></span>About Me</h2>
+        <div class="about-bio">
+          <p>
+            I am a Ph.D. student at
+            <a href="https://www.viclab.kaist.ac.kr/" target="_blank" rel="noopener">VIC Lab, KAIST</a>,
+            advised by Prof. Munchurl Kim. I am expecting to receive my Ph.D. in August 2026.
+          </p>
+          <p>
+            My research focuses on computer vision, especially <strong>image and video restoration</strong>
+            (video super-resolution, deblurring, and diffusion-based restoration), with an emphasis on
+            the real-world application perspective.
+          </p>
+        </div>
+        <div class="chips">
+          <span class="chip">Video Super-Resolution</span>
+          <span class="chip">Video Deblurring</span>
+          <span class="chip">Diffusion Models</span>
+          <span class="chip">Real-World Restoration</span>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section class="section" id="news">
+        <h2 class="section-title reveal"><span class="section-bar"></span>News</h2>
+        <ul class="news-list">
+          <li class="news-item reveal">
+            <span class="news-date">Jun 2026</span>
+            <p><strong>FMA-Net++</strong> and <strong>AVSR-Diff</strong> accepted to <strong>ECCV 2026</strong>! 🎉</p>
+          </li>
+          <li class="news-item reveal">
+            <span class="news-date">Jun 2025</span>
+            <p><strong>PAN-Crafter</strong> accepted to <strong>ICCV 2025</strong>! 🎉</p>
+          </li>
+          <li class="news-item reveal">
+            <span class="news-date">Feb 2024</span>
+            <p><strong>FMA-Net</strong> accepted to <strong>CVPR 2024</strong> as an <strong>Oral</strong> presentation (top 0.8%)! 🎉</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Publications -->
+      <section class="section" id="publications">
+        <div class="section-head reveal">
+          <h2 class="section-title"><span class="section-bar"></span>Publications</h2>
+          <a class="section-side-link" href="https://scholar.google.com/citations?user=NDw33scAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        </div>
+
+        <div class="pub-list">
+
+          <!-- FMA-Net++ -->
+          <article class="pub-card reveal">
+            <div class="pub-teaser">
+              <img src="static/images/pub-fmanetpp.png" alt="FMA-Net++ framework" loading="lazy" />
+            </div>
+            <div class="pub-body">
+              <div class="pub-badges">
+                <span class="badge badge-accent">ECCV 2026</span>
+              </div>
+              <h3 class="pub-title">FMA-Net++: Motion- and Exposure-Aware Real-World Joint Video Super-Resolution and Deblurring</h3>
+              <p class="pub-authors"><strong>Geunhyuk Youk</strong>, Jihyong Oh<sup>†</sup>, Munchurl Kim<sup>†</sup></p>
+              <p class="pub-venue">In Proceedings of the European Conference on Computer Vision (ECCV), 2026</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2512.04390" target="_blank" rel="noopener">Paper</a>
+                <a href="https://kaist-viclab.github.io/fmanetpp_site/" target="_blank" rel="noopener">Project</a>
+                <a href="https://github.com/KAIST-VICLab/FMA-Net-PlusPlus" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AVSR-Diff -->
+          <article class="pub-card reveal">
+            <div class="pub-teaser">
+              <img src="static/images/pub-avsrdiff.png" alt="AVSR-Diff framework" loading="lazy" />
+            </div>
+            <div class="pub-body">
+              <div class="pub-badges">
+                <span class="badge badge-accent">ECCV 2026</span>
+              </div>
+              <h3 class="pub-title">AVSR-Diff: Scale-Agnostic Diffusion Priors for Temporally Consistent Arbitrary-Scale Video Super-Resolution</h3>
+              <p class="pub-authors"><strong>Geunhyuk Youk</strong>, Jeonghyeok Do, Dayeon Kim, Jihyong Oh<sup>†</sup>, Munchurl Kim<sup>†</sup></p>
+              <p class="pub-venue">In Proceedings of the European Conference on Computer Vision (ECCV), 2026</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2607.00987" target="_blank" rel="noopener">Paper</a>
+                <a href="https://kaist-viclab.github.io/AVSR-Diff/" target="_blank" rel="noopener">Project</a>
+                <a href="https://github.com/KAIST-VICLab/AVSR-Diff" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PAN-Crafter -->
+          <article class="pub-card reveal">
+            <div class="pub-teaser">
+              <img src="static/images/pub-pancrafter.png" alt="PAN-Crafter framework" loading="lazy" />
+            </div>
+            <div class="pub-body">
+              <div class="pub-badges">
+                <span class="badge badge-conf">ICCV 2025</span>
+              </div>
+              <h3 class="pub-title">PAN-Crafter: Learning Modality-Consistent Alignment for PAN-Sharpening</h3>
+              <p class="pub-authors">Jeonghyeok Do, Sungpyo Kim, <strong>Geunhyuk Youk</strong>, Jaehyup Lee, Munchurl Kim</p>
+              <p class="pub-venue">In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2505.23367" target="_blank" rel="noopener">Paper</a>
+                <a href="https://kaist-viclab.github.io/PAN-Crafter_site/" target="_blank" rel="noopener">Project</a>
+                <a href="https://github.com/KAIST-VICLab/PAN-Crafter" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- FMA-Net -->
+          <article class="pub-card reveal">
+            <div class="pub-teaser">
+              <img src="static/images/pub-fmanet.png" alt="FMA-Net framework" loading="lazy" />
+            </div>
+            <div class="pub-body">
+              <div class="pub-badges">
+                <span class="badge badge-conf">CVPR 2024</span>
+                <span class="badge badge-oral">Oral · Top 0.8%</span>
+              </div>
+              <h3 class="pub-title">FMA-Net: Flow-Guided Dynamic Filtering and Iterative Feature Refinement with Multi-Attention for Joint Video Super-Resolution and Deblurring</h3>
+              <p class="pub-authors"><strong>Geunhyuk Youk</strong>, Jihyong Oh<sup>†</sup>, Munchurl Kim<sup>†</sup></p>
+              <p class="pub-venue">In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024</p>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2401.03707" target="_blank" rel="noopener">Paper</a>
+                <a href="https://kaist-viclab.github.io/fmanet-site/" target="_blank" rel="noopener">Project</a>
+                <a href="https://github.com/KAIST-VICLab/FMA-Net" target="_blank" rel="noopener">Code</a>
+                <a href="https://www.youtube.com/watch?v=kO7KavOH6vw" target="_blank" rel="noopener">Video</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- TGRS -->
+          <article class="pub-card reveal">
+            <div class="pub-teaser">
+              <img src="static/images/sarsmtnet.png" alt="SAR image translation" loading="lazy" />
+            </div>
+            <div class="pub-body">
+              <div class="pub-badges">
+                <span class="badge badge-journal">IEEE TGRS 2023</span>
+              </div>
+              <h3 class="pub-title">Transformer-Based Synthetic-to-Measured SAR Image Translation via Learning of Representational Features</h3>
+              <p class="pub-authors"><strong>Geunhyuk Youk</strong>, Munchurl Kim</p>
+              <p class="pub-venue">IEEE Transactions on Geoscience and Remote Sensing (TGRS), 2023</p>
+              <div class="pub-links">
+                <a href="https://ieeexplore.ieee.org/document/10103552" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CF-SIS -->
+          <article class="pub-card reveal">
+            <div class="pub-teaser">
+              <img src="static/images/cfsis.png" alt="CF-SIS 3D point cloud segmentation" loading="lazy" />
+            </div>
+            <div class="pub-body">
+              <div class="pub-badges">
+                <span class="badge badge-conf">ACM MM 2020</span>
+              </div>
+              <h3 class="pub-title">CF-SIS: Semantic-Instance Segmentation of 3D Point Clouds by Context Fusion with Self-Attention</h3>
+              <p class="pub-authors">Xin Wen, Zhizhong Han, <strong>Geunhyuk Youk</strong>, Yu-Shen Liu</p>
+              <p class="pub-venue">In Proceedings of the ACM International Conference on Multimedia (ACM MM), 2020</p>
+              <div class="pub-links">
+                <a href="https://dl.acm.org/doi/10.1145/3394171.3413829" target="_blank" rel="noopener">Paper</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <p class="pub-footnote reveal"><sup>†</sup> Co-corresponding authors.</p>
+      </section>
+
+      <!-- Academic Service -->
+      <section class="section" id="service">
+        <h2 class="section-title reveal"><span class="section-bar"></span>Academic Service</h2>
+        <div class="service-grid">
+          <div class="service-card reveal">
+            <h3>Conference Reviewer</h3>
+            <ul>
+              <li>CVPR</li>
+              <li>NeurIPS</li>
+              <li>BMVC</li>
+            </ul>
+          </div>
+          <div class="service-card reveal">
+            <h3>Journal Reviewer</h3>
+            <ul>
+              <li>IEEE Transactions on Image Processing (TIP)</li>
+              <li>IEEE Transactions on Multimedia (TMM)</li>
+              <li>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</li>
+              <li>Computer Vision and Image Understanding (CVIU)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="section" id="education">
+        <h2 class="section-title reveal"><span class="section-bar"></span>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Sep 2022 – Aug 2026 (expected)</span>
+              <h3>Ph.D. in Electrical Engineering</h3>
+              <p>KAIST, Korea · Advisor: Prof. Munchurl Kim</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Sep 2020 – Jul 2022</span>
+              <h3>M.S. in Electrical Engineering</h3>
+              <p>KAIST, Korea · Advisor: Prof. Munchurl Kim</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Sep 2015 – Jul 2019</span>
+              <h3>B.S. in Software Engineering</h3>
+              <p>Tsinghua University, China · Advisor: Prof. Yu-Shen Liu</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copy">© <span id="year">2026</span> Geunhyuk Youk · Last updated July 2026</p>
+    </div>
+  </footer>
+
+  <script src="static/js/main.js"></script>
+</body>
+</html>

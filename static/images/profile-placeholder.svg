@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e2338"/>
+      <stop offset="1" stop-color="#10304a"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" fill="url(#bg)"/>
+  <circle cx="240" cy="240" r="96" fill="none" stroke="url(#acc)" stroke-width="4" opacity="0.9"/>
+  <text x="240" y="268" font-family="Sora, Inter, Arial, sans-serif" font-size="72" font-weight="800" fill="url(#acc)" text-anchor="middle">GY</text>
+  <text x="240" y="410" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#e6eaf2" text-anchor="middle">Geunhyuk Youk</text>
+  <text x="240" y="442" font-family="Inter, Arial, sans-serif" font-size="15" fill="#7c89a6" text-anchor="middle">add images/profile.jpg to replace</text>
+</svg>
